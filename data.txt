@@ -1,0 +1,210 @@
+{
+	"code": 200,
+	"message": "ok",
+	"data": [
+		{
+		"ispArea": "北京电信",
+		"data": [
+			{
+				"nodeName": "cn11",
+				"isp": "电信",
+				"area": "北京",
+				"nodeSite": "北京",
+				"rtt": 18,
+				"loss": 0.02,
+				"rl": 100,
+				"variance": 5,
+				"score": 90,
+				"level": 2
+			}
+			]
+		},
+		{
+		"ispArea": "北京电信",
+		"data": [
+			{
+				"nodeName": "cn11",
+				"isp": "电信",
+				"area": "北京",
+				"nodeSite": "北京",
+				"rtt": 18,
+				"loss": 0.02,
+				"rl": 100,
+				"variance": 5,
+				"score": 90,
+				"level": 2
+			}
+			]
+		},
+		{
+		"ispArea": "北京电信",
+		"data": [
+			{
+				"nodeName": "cn11",
+				"isp": "电信",
+				"area": "北京",
+				"nodeSite": "北京",
+				"rtt": 18,
+				"loss": 0.02,
+				"rl": 100,
+				"variance": 5,
+				"score": 90,
+				"level": 2
+			}
+			]
+		},
+		{
+		"ispArea": "河北电信",
+		"data": [
+			{
+				"nodeName": "cn13",
+				"isp": "电信",
+				"area": "河北",
+				"nodeSite": "河北",
+				"rtt": 18,
+				"loss": 0.02,
+				"rl": 100,
+				"variance": 5,
+				"score": 90,
+				"level": 2
+			}
+		]
+		},
+		{
+		"ispArea": "天津电信",
+		"data": [
+			{
+				"nodeName": "cn10",
+				"isp": "电信",
+				"area": "天津",
+				"nodeSite": "天津",
+				"rtt": 18,
+				"loss": 0.02,
+				"rl": 100,
+				"variance": 5,
+				"score": 90,
+				"level": 2
+			}
+		]
+		},
+		{
+		"ispArea": "天津电信",
+		"data": [
+			{
+				"nodeName": "cn10",
+				"isp": "电信",
+				"area": "天津",
+				"nodeSite": "天津",
+				"rtt": 18,
+				"loss": 0.02,
+				"rl": 100,
+				"variance": 5,
+				"score": 90,
+				"level": 2
+			}
+		]
+		},
+		{
+		"ispArea": "天津电信",
+		"data": [
+			{
+				"nodeName": "cn10",
+				"isp": "电信",
+				"area": "天津",
+				"nodeSite": "天津",
+				"rtt": 18,
+				"loss": 0.02,
+				"rl": 100,
+				"variance": 5,
+				"score": 90,
+				"level": 2
+			}
+		]
+		},
+		{
+		"ispArea": "天津电信",
+		"data": [
+			{
+				"nodeName": "cn10",
+				"isp": "电信",
+				"area": "天津",
+				"nodeSite": "天津",
+				"rtt": 18,
+				"loss": 0.02,
+				"rl": 100,
+				"variance": 5,
+				"score": 90,
+				"level": 2
+			}
+		]
+		},
+		{
+		"ispArea": "天津电信",
+		"data": [
+			{
+				"nodeName": "cn10",
+				"isp": "电信",
+				"area": "天津",
+				"nodeSite": "天津",
+				"rtt": 18,
+				"loss": 0.02,
+				"rl": 100,
+				"variance": 5,
+				"score": 90,
+				"level": 2
+			}
+		]
+		},
+		{
+		"ispArea": "天津电信",
+		"data": [
+			{
+				"nodeName": "cn10",
+				"isp": "电信",
+				"area": "天津",
+				"nodeSite": "天津",
+				"rtt": 18,
+				"loss": 0.02,
+				"rl": 100,
+				"variance": 5,
+				"score": 90,
+				"level": 2
+			}
+		]
+		},
+		{
+		"ispArea": "天津电信",
+		"data": [
+			{
+				"nodeName": "cn10",
+				"isp": "电信",
+				"area": "天津",
+				"nodeSite": "天津",
+				"rtt": 18,
+				"loss": 0.02,
+				"rl": 100,
+				"variance": 5,
+				"score": 90,
+				"level": 2
+			}
+		]
+		},
+		{
+		"ispArea": "天津电信",
+		"data": [
+			{
+				"nodeName": "cn10",
+				"isp": "电信",
+				"area": "天津",
+				"nodeSite": "天津",
+				"rtt": 18,
+				"loss": 0.02,
+				"rl": 100,
+				"variance": 5,
+				"score": 90,
+				"level": 2
+			}
+		]
+		}
+	]
+}

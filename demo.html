@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Datatables简单封装</title>
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" /> 
+	 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.css" /> 
+	 <script src="http://cdn.gbtags.com/datatables/1.10.5/js/jquery.js"></script> 
+	 <script src="http://cdn.gbtags.com/datatables/1.10.5/js/jquery.dataTables.min.js"></script> 
+	 <script type="text/javascript" language="javascript" src="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.js"></script> 
+	<script>	
+		$(document).ready(function() {
+					$('#ndArea').DataTable( {
+						"ajax":{
+							"url":"data.txt",
+							"type":"POST"
+						},
+						"info":false,
+				        "columns": [
+				            { 
+				            	"data": "ispArea" ,
+								"render": function ( data, type, full, meta ) {
+      								return '<a href="'+data+'">'+data+'</a>';
+    							}
+				        	},
+				            { "data": "data[1].nodeName" },
+				            { "data": "data[1].isp" },
+				            { "data": "data[1].rtt" },
+				            { 
+				            	"data": "data[1].loss" ,
+								"render": function(data){
+									return parseInt(data*100)+"%";
+								}
+				        	},
+				            { "data": "data[1].rl" },
+				            { "data": "data[1].variance" },
+				            { "data": "data[1].score" },
+				            { "data": "data[1].level" }
+				        ]
+				    } );		    
+		} );
+	</script>
+
+</head>
+<body>
+	<div class="mt-20">
+  	<table id="ndArea" class="display table table-border table-bordered table-bg table-hover table-sort"  cellspacing="0" width="100%" style="text-align: center;">
+        <thead>
+            <tr class="text-c">
+                <th>地区运营商</th>
+                <th>节点名称</th>
+                <th>节点位置</th>
+                <th>rtt</th>
+                <th>loss(%)</th>
+                <th>rl</th>
+                <th>方差</th>
+                <th>得分</th>
+                <th>等级</th>
+            </tr>
+        </thead>
+    </table>
+    </div>
+</body>
+</html>
