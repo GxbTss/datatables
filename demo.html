@@ -10,41 +10,59 @@
 	 <script type="text/javascript" language="javascript" src="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.js"></script> 
 	<script>	
 		$(document).ready(function() {
-					$('#ndArea').DataTable( {
-						"ajax":{
-							"url":"data.txt",
-							"type":"POST"
-						},
-						"info":false,
-				        "columns": [
-				            { 
-				            	"data": "ispArea" ,
-								"render": function ( data, type, full, meta ) {
-      								return '<a href="'+data+'">'+data+'</a>';
-    							}
-				        	},
-				            { "data": "data[1].nodeName" },
-				            { "data": "data[1].isp" },
-				            { "data": "data[1].rtt" },
-				            { 
-				            	"data": "data[1].loss" ,
-								"render": function(data){
-									return parseInt(data*100)+"%";
-								}
-				        	},
-				            { "data": "data[1].rl" },
-				            { "data": "data[1].variance" },
-				            { "data": "data[1].score" },
-				            { "data": "data[1].level" }
-				        ]
-				    } );		    
+			$('#ndArea').DataTable( {
+				"ajax":{
+					"url":"data.txt",
+					"type":"POST"
+				},
+				"searching":false, //去掉搜索框
+			    "bLengthChange":false,//去掉每页多少条框体
+			    "destroy":true,//Cannot reinitialise DataTable,解决重新加载表格内容问题
+				"language": {
+			        "info": "", // 表格左下角显示的文字
+			        "paginate": {
+			            "previous": "上一页",
+			            "next": "下一页"
+			        }
+			    },
+			    //"info":false,
+		        "columns": [
+		            { 
+		            	"data": "ispArea" ,
+						"render": function ( data, type, rows) {
+							return '<a href="'+data+'">'+data+'</a>';
+						}
+		        	},
+		            { "data": "data.0.nodeName" },
+		            { "data": "data.0.isp" },
+		            { "data": "data.0.rtt" },
+		            { 
+		            	"data": "data.0.loss" ,
+						"render": function(data){
+							return parseInt(data*100)+"%";
+						}
+		        	},
+		            { "data": "data.0.rl" },
+		            { "data": "data.0.variance" },
+		            { "data": "data.0.score" },
+		            { "data": "data.0.level" }
+		        ],
+		        "createdRow": function( row, data, dataIndex ) {
+		            $(row).children('td').attr('style', 'text-align: center;')//默认表格内容居中
+		            var tds=$(row).children('td').eq(0);
+		            console.log(typeof tds.text());
+		            tds.each(function(index, el) {
+		            	console.log(this);
+		            });
+		        }
+		    } ); 
 		} );
 	</script>
 
 </head>
 <body>
 	<div class="mt-20">
-  	<table id="ndArea" class="display table table-border table-bordered table-bg table-hover table-sort"  cellspacing="0" width="100%" style="text-align: center;">
+  	<table id="ndArea" class="display table table-border table-bordered table-bg table-hover table-sort"  cellspacing="0" width="100%">
         <thead>
             <tr class="text-c">
                 <th>地区运营商</th>
